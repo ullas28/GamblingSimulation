@@ -39,7 +39,7 @@ public class GamblingGame {
                 newStake--;
                 System.out.println("New Amount Inhand: "+newStake);
 
-                /*UC3 gambler resigns if he loses 50$ profit
+                /*UC3 gambler resigns if he loses 50$ 
                 *As a Calculative Gambler if won or lost 50% of the stake, would resign for the day*/
 
                 if (newStake == 50){
