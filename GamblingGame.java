@@ -78,13 +78,28 @@ public class GamblingGame {
     }
     /*Each month would like to know the days won and lost and by how much.*/
     void showWinLossCount(){
+        int count = 0;
+        int count1 = 0;
 
         for(int i=0;i<30;i++){
-            System.out.println("Day: "+(i+1)+ " Total Win count: "+(winCountArr[i]));
-            System.out.println("Day: "+(i+1)+ " Total Loose count: "+(looseCountArr[i]));
+            if(winCountArr[i]==50) {
+                System.out.println("Day: " + (i + 1) + " Total Win count: " + (++count));
+            }else
+            System.out.println("Day: "+(i+1)+ " Total Loose count: "+ (++count1));
         }
     }
 
+    /*Would also like to know my luckiest day where I won maximum and my unluckiest day where I lost maximum*/
+
+    void luckydays() {
+        for (int i = 0; i < 30; i++) {
+            if (winCountArr[i]==50){
+                System.out.println("Day" + (i + 1 ) +" won " + winCountArr[i] +" is a Lucky day");
+            }
+            else
+                System.out.println("Day" + (i + 1 ) + " Lost " + looseCountArr[i] +" is a Unlucky day");
+        }
+    }
     public static void main (String[]args){
 
             System.out.println("Welcome to Gambling Simulation Problem.");
@@ -94,15 +109,7 @@ public class GamblingGame {
             GamblingGame gmg = new GamblingGame();
             gmg.monthGame();
             gmg.showWinLossCount();
-            System.out.println("Won days");
-            for (int i: winCountArr ) {
-                System.out.print(i + " ");
-            }
-            System.out.println("");
-            System.out.println("lost days");
-            for (int i: looseCountArr ) {
-                System.out.print(i + " ");
-            }
+            gmg.luckydays();
         }
     }
 
