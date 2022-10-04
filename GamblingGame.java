@@ -83,9 +83,9 @@ public class GamblingGame {
 
         for(int i=0;i<30;i++){
             if(winCountArr[i]==50) {
-                System.out.println("Day: " + (i + 1) + " Total Win count: " + (++count));
+                System.out.println("Day: " + (i + 1) + " Total Win count: " + (++count) + " Won by " + winCountArr[i]);
             }else
-            System.out.println("Day: "+(i+1)+ " Total Loose count: "+ (++count1));
+            System.out.println("Day: "+(i+1)+ " Total Loose count: "+ (++count1) + " Lost by " + looseCountArr[i]);
         }
     }
 
